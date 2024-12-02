@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" href="foto_ICON.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-white py-6 flex items-center justify-center space-x-6">
+        <a href="https://fti.unai.edu/" target="_blank">
+            <img src="Logo FTI.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+        <a href="https://unai.edu/" target="_blank">
+            <img src="logo Unai.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+        <h1 class="text-center text-4xl font-semibold flex-grow text-black">ℹ️ About</h1>
+        <a href="https://asafatigea.my.id" target="_blank">
+            <img src="LogoWeb&icon.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+    </header>
+    <!-- Main Content Container -->
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+
+
+        <!-- Menu Sidebar -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <ul class="space-y-4 text-center">
+                <li><a href="index.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🏛️Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">ℹ️ About</a>
+                </li>
+                <li><a href="MyHoliday.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🌴 My
+                        Holiday</a></li>
+                <li><a href="kalkulator.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">
+                        🧮 Calculator</a></li>
+                <li><a href="registration.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">📝
+                        Registration</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main bg-gray-800 p-6 rounded-lg shadow-lg col-span-2">
+            <h2 class="text-3xl font-semibold text-white-800 mb-4">Who Am I?</h2>
+            <p class="text-lg text-white mb-4">Hi all my friends, I am a website fan, and here I will introduce who I
+                am</p>
+
+            <!-- Biodata Section -->
+            <div class="section-header cursor-pointer" onclick="toggleContent('biodata')">
+                <img src="Profil.jpg" alt="An image" class="responsive-img w-full max-w-xs mx-auto rounded-lg">
+            </div>
+            <div id="biodata" class="section-content mb-4 text-white">
+                <p class="intro-text text-white">
+                    Hello, my name is Asafati Gea. I'm 23 years old and I come from Nias Island, North Sumatra,
+                    Indonesia. I am currently studying at Universitas Advent Indonesia, working toward a Bachelor's degree in
+                    Information System. I have a deep passion for technology and am excited to build my career in the field of
+                    information
+                    systems, where I hope to make a meaningful impact.
+                </p>
+                <p>
+                    <a href="https://youtube.be/ywfkLWrMJGo?feature=shared" target="_blank" class="text-sky-500">My
+                        Introduction Video Link</a>
+                </p>
+            </div>
+
+
+            <!-- Education Section -->
+            <div class="section-header cursor-pointer" onclick="toggleContent('education')">
+                <h3 class="text-2xl font-bold text-white mb-2">My Education</h3>
+            </div>
+            <div id="education" class="section-content mb-4" style="display: none;">
+                <ol class="list-decimal pl-6 text-white">
+                    <li>Graduate of STATE ELEMENTARY SCHOOL 077282 FADOROBOTOLALA</li>
+                    <li>Graduate of SMP NEGERI 3 ALASA ONONAMELETUMULA <a
+                            href="https://youtu.be/oYabSST4izo?si=wbwh0l8I4puZenws" target="_blank"
+                            class="text-sky-500">linkVideo</a></li>
+                    <li>Graduate of STATE SENIOR HIGH SCHOOL 2 ALASA LOLOANAA <a
+                            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank"
+                            class="text-sky-500">link Video</a></li>
+                    <li>Still studying for S1 - SI - Adventist University of Indonesia <a
+                            href="https://youtu.be/1wDYMN7a66Y?si=t2vlQ8XO5t_C_yHK" target="_blank"
+                            class="text-sky-500">linkVideo</a></li>
+                </ol>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section-header cursor-pointer" onclick="toggleContent('experience')">
+                <h3 class="text-2xl font-bold text-white mb-2">My Experience</h3>
+            </div>
+            <div id="experience" class="section-content mb-4" style="display: none;">
+                <ol class="list-decimal pl-6 text-white">
+                    <li>One year joining the missionary member service <a
+                            href="https://youtu.be/wudjzlGbP-k?si=FXdkEqrsUlKR5eTL" target="_blank"
+                            class="text-sky-500">link Video</a></li>
+                    <li>Three months selling Advent books in Jogja</li>
+                    <li>Six months as a cooperative collector in Tangerang</li>
+                    <li>Three months as a VPS Customer support <a
+                            href="https://youtu.be/98PnMHLeq2w?si=Alw9hYA6vnF8VByR" target="_blank"
+                            class="text-sky-500">linkVideo</a></li>
+                    <li>One year as a cook at the UNAI cafeteria <a
+                            href="https://youtu.be/2UM5vGMe_u0?si=iHHY969_kwVG4GNr" target="_blank"
+                            class="text-sky-500">link Video</a></li>
+                </ol>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section-header cursor-pointer" onclick="toggleContent('skills')">
+                <h3 class="text-2xl font-bold text-white mb-2">My Skills</h3>
+            </div>
+            <div id="skills" class="section-content mb-4" style="display: none;">
+                <ol class="list-decimal pl-6 text-white">
+                    <li>I can play the piano <a href="https://youtube.com/shorts/8xKqxSeLyC8?si=rDHT5clz6IOTexNb"
+                            target="_blank" class="text-sky-500">linkVideo</a></li>
+                    <li>I can play the flute</li>
+                    <li>I can play the violin</li>
+                    <li>I can play the guitar <a href="https://youtu.be/cdVqcrDgMG8?si=2VABDTseHF8f7CSB" target="_blank"
+                            class="text-sky-500">link Video</a></li>
+                </ol>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div class="section-header cursor-pointer" onclick="toggleContent('hobbies')">
+                <h3 class="text-2xl font-bold text-white mb-2">Hobbies & Interests</h3>
+            </div>
+            <div id="hobbies" class="section-content mb-4" style="display: none;">
+                <ol class="list-decimal pl-6 text-white">
+                    <li>My hobby: Badminton <a href="https://youtu.be/_gSSouw-bh4?si=Slmf7zRQ7H9jbluj" target="_blank"
+                            class="text-sky-500">link Video</a></li>
+                    <li>My interests: I want to be a Programmer <a
+                            href="https://youtube.com/shorts/8oQH05KUnSI?si=5ohkhRlRIhVtPjGf" target="_blank"
+                            class="text-sky-500">link Video</a></li>
+                </ol>
+            </div>
+
+            <!-- Ordered List Section -->
+            <div class="section-header cursor-pointer" onclick="toggleContent('ordered-list')">
+                <h3 class="text-2xl font-bold text-white mb-2">Ordered List</h3>
+            </div>
+            <div id="ordered-list" class="section-content mb-4" style="display: none;">
+                <ol class="list-decimal pl-6 text-white">
+                    <li>Reading Books</li>
+                    <li>Traveling</li>
+                    <li>Coding</li>
+                </ol>
+                <p><a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="text-sky-500">link
+                        Video</a></p>
+            </div>
+        </div>
+
+        <!-- Sidebar for Interesting Facts -->
+        <div class="bg-gray-800 text-center p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-white">Interesting Facts</h2>
+            <p class="text-gray-400 mt-4">Any additional information, fun facts, or future advertisements could go here.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-800 text-center py-4">
+        <p class="text-gray-400">&copy; 2024 Asafati Gea. All rights reserved</p>
+    </div>
+
+</body>
+
+</html>

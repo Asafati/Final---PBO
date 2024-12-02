@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Calculator</title>
+    <link rel="icon" href="foto_ICON.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        let expression = '';
+
+        function press(value) {
+            expression += value;
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            expression = '';
+            updateDisplay();
+        }
+
+        function calculate() {
+            try {
+                const result = eval(expression);
+                expression = result.toString();
+            } catch (error) {
+                expression = "Error";
+            }
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById("display").innerText = expression || '0';
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+    <header class="bg-white py-6 flex items-center justify-center space-x-6">
+        <a href="https://fti.unai.edu/" target="_blank">
+            <img src="Logo FTI.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+        <a href="https://unai.edu/" target="_blank">
+            <img src="logo Unai.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+        <h1 class="text-center text-4xl font-semibold flex-grow text-black">🧮 Calculator </h1>
+        <a href="https://asafatigea.my.id" target="_blank">
+            <img src="LogoWeb&icon.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+    </header>
+    <!-- Main Content Wrapper -->
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 p-4">
+
+        <!-- Menu Sidebar -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <ul class="space-y-4 text-center">
+                <li><a href="index.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🏛️Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">ℹ️ About</a>
+                </li>
+                <li><a href="MyHoliday.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🌴 My
+                        Holiday</a></li>
+                <li><a href="kalkulator.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">
+                        🧮 Calculator</a></li>
+                <li><a href="registration.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">📝
+                        Registration</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Calculator Area -->
+        <main class="bg-gray-800 p-6 rounded-lg shadow-lg col-span-2">
+            <div class="calculator w-full grid grid-cols-4 gap-4 p-6 rounded-lg bg-gray-800 shadow-md">
+
+                <!-- Display Area -->
+                <div id="display" class="col-span-4 text-right text-2xl p-3 bg-white text-gray-900 rounded-md mb-6">
+                    0
+                </div>
+
+                <!-- Calculator Buttons -->
+                <button onclick="press('7')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">7</button>
+                <button onclick="press('8')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">8</button>
+                <button onclick="press('9')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">9</button>
+                <button onclick="press('/')"
+                    class="p-4 bg-orange-500 text-white rounded-md hover:bg-orange-400">/</button>
+
+                <button onclick="press('4')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">4</button>
+                <button onclick="press('5')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">5</button>
+                <button onclick="press('6')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">6</button>
+                <button onclick="press('*')"
+                    class="p-4 bg-orange-500 text-white rounded-md hover:bg-orange-400">*</button>
+
+                <button onclick="press('1')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">1</button>
+                <button onclick="press('2')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">2</button>
+                <button onclick="press('3')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">3</button>
+                <button onclick="press('-')"
+                    class="p-4 bg-orange-500 text-white rounded-md hover:bg-orange-400">-</button>
+
+                <button onclick="press('0')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">0</button>
+                <button onclick="press('.')" class="p-4 bg-gray-600 text-white rounded-md hover:bg-gray-500">.</button>
+                <button onclick="clearDisplay()"
+                    class="p-4 bg-red-500 text-white rounded-md hover:bg-red-400">C</button>
+                <button onclick="press('+')"
+                    class="p-4 bg-orange-500 text-white rounded-md hover:bg-orange-400">+</button>
+
+                <!-- Equals Button -->
+                <button onclick="calculate()"
+                    class="col-span-4 p-4 bg-green-500 text-white rounded-md hover:bg-green-400">=</button>
+
+            </div>
+        </main>
+            <!-- Sidebar for Interesting Facts -->
+            <div class="bg-gray-800 text-center p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-white">Interesting Facts</h2>
+                <p class="text-gray-400 mt-4">Any additional information, fun facts, or future advertisements could go here.</p>
+            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4 text-center">
+        <p class="text-gray-400">&copy; 2024 Asafati Gea. All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>

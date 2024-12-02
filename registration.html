@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="icon" href="foto_ICON.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Fungsi untuk memvalidasi input
+        function validateForm() {
+            // Ambil nilai input
+            var name = document.getElementById("nama").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (name.length > 40) {
+                alert("Nama tidak boleh lebih dari 40 karakter.");
+                return false;
+            }
+            var phonePattern = /^[0-9]{1,15}$/;
+            if (!phone.match(phonePattern)) {
+                alert("Nomor telepon hanya boleh angka dan maksimal 15 digit.");
+                return false;
+            }
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.match(emailPattern)) {
+                alert("Masukkan email yang valid.");
+                return false;
+            }
+            var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
+            if (!password.match(passwordPattern)) {
+                alert("Sorry🙏 Your password must be between 8-16 characters, contain 1 uppercase letter, 1 lowercase letter, and 1 number, with no spaces or symbols.\nExample:  👉Asafatigea1👈\nPlease create a new password again.");
+                return false;
+            }
+
+
+            alert("Pendaftaran Berhasil");
+            return true;
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+    <body class="bg-gray-900 text-gray-200">
+        <header class="bg-white py-6 flex items-center justify-center space-x-6">
+            <a href="https://fti.unai.edu/" target="_blank">
+                <img src="Logo FTI.jpg" alt="Logo" class="w-20 h-25">
+            </a>
+            <a href="https://unai.edu/" target="_blank">
+                <img src="logo Unai.jpg" alt="Logo" class="w-20 h-25">
+            </a>
+            <h1 class="text-center text-4xl font-semibold flex-grow text-black">📝Registration</h1>
+            <a href="https://asafatigea.my.id" target="_blank">
+                <img src="LogoWeb&icon.jpg" alt="Logo" class="w-20 h-25">
+            </a>
+        </header>
+        <!-- Main Content Wrapper -->
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 p-4">
+
+            <!-- Menu Sidebar -->
+            <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                <ul class="space-y-4 text-center">
+                    <li><a href="index.html"
+                            class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🏛️Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">ℹ️ About</a>
+                    </li>
+                    <li><a href="MyHoliday.html"
+                            class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🌴 My
+                            Holiday</a></li>
+                    <li><a href="kalkulator.html"
+                            class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">
+                            🧮 Calculator</a></li>
+                    <li><a href="registration.html"
+                            class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">📝
+                            Registration</a>
+                    </li>
+                </ul>
+            </div>
+
+        <!-- Main Content Area -->
+        <main class="bg-gray-700 p-6 rounded-lg shadow-lg col-span-2">
+            <div class="registrationForm">
+                <h2 class="text-3xl font-semibold text-white mb-4">Form Registrasi Fieldtrip</h2>
+                <form onsubmit="return validateForm()">
+                    <div class="form-group mb-4">
+                        <label for="Nama" class="block text-lg text-white">Full Name</label>
+                        <input type="text" id="nama" name="nama" required
+                            class="mt-2 p-3 w-full bg-gray-700 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="phone" class="block text-lg text-white">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required
+                            class="mt-2 p-3 w-full bg-gray-700 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="email" class="block text-lg text-white">E-mail</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-2 p-3 w-full bg-gray-700 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="password" class="block text-lg text-white">Password</label>
+                        <input type="password" id="password" name="password" required
+                            class="mt-2 p-3 w-full bg-gray-700 text-gray-900 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 px-4 bg-green-500 text-white rounded-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300">Daftar</button>
+                </form>
+            </div>
+        </main>
+        <!-- Sidebar for Interesting Facts -->
+        <div class="bg-gray-800 text-center p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-white">Contact Me</h2>
+            <br><br>
+            <div class="text-left">
+                <p class="text-white text-lg">
+                    If you need to contact me, you can reach me through the following channels:
+                </p>
+                <br>
+                <!-- WhatsApp Contact -->
+                <a href="https://wa.me/6282165713526" target="_blank"
+                    class="text-left text-green-500 text-3xl hover:text-green-400 flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp text-4xl"></i>
+                    <span>WhatsApp: 082165713526</span>
+                </a>
+                <br><br>
+                <!-- Telegram Contact -->
+                <a href="https://t.me/082165713526" target="_blank"
+                    class="text-blue-500 text-3xl hover:text-blue-400 flex items-center justify-center space-x-2">
+                    <i class="fab fa-telegram text-4xl"></i>
+                    <span>Telegram: 082165713526</span>
+                </a>
+                <br><br>
+                <!-- Email Contact -->
+                <a href="mailto:2382006@unai.edu" target="_blank"
+                    class="text-blue-500 text-3xl hover:text-blue-400 flex items-center justify-center space-x-2">
+                    <i class="fas fa-envelope text-4xl"></i>
+                    <span>Email: 2382006@unai.edu</span>
+                </a>
+                <br><br>
+                <p class="text-white text-lg">
+                    You can also make your payment for registration via:
+                </p>
+                <br>
+                <!-- Payment via Dana -->
+                <div class="text-yellow-500 text-xl flex items-center justify-center space-x-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Dana_Logo.png" alt="Dana Logo"
+                        class="w-8 h-8">
+                    <span>Dana: 082165713526/asafatigea</span>
+                </div>
+                <br>
+                <!-- Payment via Seabank -->
+                <div class="text-yellow-500 text-xl flex items-center justify-center space-x-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Seabank_logo.png" alt="Seabank Logo"
+                        class="w-8 h-8">
+                    <span>Seabank: 901818491396 /asafatigea</span>
+                </div>
+                <br>
+            </div>
+            <p class="text-gray-400 mt-4">
+                Any additional information or inquiries, feel free to contact me using the methods above.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4 text-center">
+        <p class="text-gray-400">&copy; 2024 Asafati Gea. All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Responsive Website</title>
+    <link rel="icon" href="foto_ICON.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-1000">
+    <header class="bg-white py-6 flex items-center justify-center space-x-6">
+        <a href="https://fti.unai.edu/" target="_blank">
+            <img src="Logo FTI.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+        <a href="https://unai.edu/" target="_blank">
+            <img src="logo Unai.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+        <!-- HOME text remains static -->
+        <h1 class="text-center text-4xl font-semibold text-black-500 flex-grow">
+            🏛️HOME
+        </h1>
+
+        <a href="https://asafatigea.my.id" target="_blank">
+            <img src="LogoWeb&icon.jpg" alt="Logo" class="w-20 h-25">
+        </a>
+    </header>
+</body>
+
+    <!-- Main Content Wrapper -->
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+
+        <!-- Menu Sidebar -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <ul class="space-y-4 text-center">
+                <li><a href="index.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🏛️Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">ℹ️ About</a>
+                </li>
+                <li><a href="MyHoliday.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">🌴 My Holiday</a></li>
+                <li><a href="kalkulator.html" class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">
+                        🧮 Calculator</a></li>
+                <li><a href="registration.html"
+                        class="block py-2 px-4 bg-gray-700 text-white rounded shadow hover:bg-gray-600 transition">📝 Registration</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="bg-gray-800 p-6 rounded-lg shadow-lg col-span-2">
+            <h1 class="text-3xl font-semibold text-white mb-4">Hello There!, 你们好吗？😄</h1>
+            <img src="Profil1.jpg" alt="An image" class="w-full max-w-xs mx-auto rounded-lg mb-6">
+            <p class="intro-text text-white text-gray-700">
+                Hello, my name is Asafati Gea, and I'm 23 years old. I come from Nias Island, North Sumatra, Indonesia.
+                Currently, I am a student at Universitas Advent Indonesia, pursuing a Bachelor's degree in Information
+                Systems.
+                My main goal in studying Information Systems is to equip myself with the technical knowledge and skills
+                that will support
+                my future career in business. I am passionate about using technology to create efficient business
+                solutions and innovate
+                in the business world.
+            </p>
+        </main>
+
+        <!-- Sidebar for Interesting Facts -->
+        <div class="bg-gray-800 text-center p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-white">Interesting Facts</h2>
+            <p class="text-gray-400 mt-4">Any additional information, fun facts, or future advertisements could go here.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4 text-center">
+        <p class="text-gray-400">&copy; 2024 Asafati Gea. All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>
