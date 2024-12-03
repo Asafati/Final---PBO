@@ -10,16 +10,14 @@ import java.util.List;
 public class WordRepositoryDbImpl implements WordRepository {
     private final Database database;
 
-    // Konstruktor untuk menginisialisasi objek Database
     public WordRepositoryDbImpl(Database database) {
         this.database = database;
     }
 
-    // Mendapatkan semua kata dari database
     @Override
     public List<Word> getAll() {
         List<Word> wordList = new ArrayList<>();
-        String sql = "SELECT * FROM kamus"; // Query untuk mengambil semua kata
+        String sql = "SELECT * FROM kamus";
         try (Connection connection = database.getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(sql)) {
@@ -27,7 +25,7 @@ public class WordRepositoryDbImpl implements WordRepository {
                 Integer id = resultSet.getInt("id");
                 String word = resultSet.getString("word");
                 String meaning = resultSet.getString("meaning");
-                wordList.add(new Word(id, word, meaning)); // Menambahkan objek Word ke list
+                wordList.add(new Word(id, word, meaning));
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());
@@ -35,7 +33,6 @@ public class WordRepositoryDbImpl implements WordRepository {
         return wordList;
     }
 
-    // Menambahkan kata baru ke database
     @Override
     public void add(Word word) {
         String sql = "INSERT INTO words (word, meaning) VALUES (?, ?)";
@@ -50,7 +47,6 @@ public class WordRepositoryDbImpl implements WordRepository {
         }
     }
 
-    // Menghapus kata dari database
     @Override
     public Boolean remove(String word) {
         String sql = "DELETE FROM words WHERE word = ?";
@@ -68,7 +64,6 @@ public class WordRepositoryDbImpl implements WordRepository {
         return false;
     }
 
-    // Mengedit arti kata dalam database
     @Override
     public Boolean edit(Word word) {
         String sql = "UPDATE words SET meaning = ? WHERE word = ?";
